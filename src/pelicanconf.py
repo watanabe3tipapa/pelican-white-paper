@@ -1,5 +1,5 @@
 AUTHOR = 'watanabe3tipapa'
-SITENAME = 'Pelcan White Paper'
+SITENAME = 'Pelican White Paper'
 SITEURL = ""
 
 PATH = "content"
