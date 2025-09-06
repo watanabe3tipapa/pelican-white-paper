@@ -1,4 +1,4 @@
-:title: Example (RST)
+:title: reStructuredText という記法
 :date: 2025-09-06 11:00
 :category: reStructuredText
 :tags: pelican, rst
