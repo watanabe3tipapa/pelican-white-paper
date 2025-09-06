@@ -1,0 +1,64 @@
+:title: Template 4 (RST)
+:date: 2025-09-07 11:00
+:category: reStructuredText
+:tags: pelican, rst
+:author: Your Name
+:summary: This is a sample article written in reStructuredText.
+
+================
+RSTでの記事作成
+================
+
+これはreStructuredTextで書かれた記事の本文です。
+
+リンクの例
+------------
+
+`Pelicanの公式サイト <https://getpelican.com/>`_ を見てみましょう。
+
+コードブロックの例
+--------------------
+
+.. code-block:: python
+
+   print("Hello from a reStructuredText file!")
+
+---
+
+:title: 私の最初のRST記事
+:date: 2025-10-01 10:00
+:category: Python
+:tags: Pelican, reStructuredText
+:author: Your Name
+:summary: RST形式での記事の書き方についての短い要約。
+
+================
+レベル1の見出し (h1)
+================
+
+レベル2の見出し (h2)
+----------------
+
+レベル3の見出し (h3)
+
+~~~~~~~~~~~~~~~~
+
+* アイテム1
+
+* アイテム2
+
+  * サブアイテム
+
+`Pelicanのドキュメント <https://docs.getpelican.com/>`_
+
+.. image:: /assets/your_image.jpg
+   :alt: 代替テキスト
+
+.. code-block:: python
+
+   import os
+   import sys
+
+   print("Hello, RST!")
+
+---

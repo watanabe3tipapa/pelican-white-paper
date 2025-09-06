@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+        <head>
+                        <meta charset="utf-8" />
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                        <meta name="generator" content="Pelican" />
+                        <title>Pelcan White Paper - rst</title>
+                        <link rel="stylesheet" href="/theme/css/main.css" />
+        </head>
+
+        <body id="index" class="home">
+                <header id="banner" class="body">
+                        <h1><a href="/">Pelcan White Paper</a></h1>
+                        <nav><ul>
+                                                <li><a href="/category/restructuredtext.html">reStructuredText</a></li>
+                                                <li><a href="/category/tekunorozi-.html">テクノロジー</a></li>
+                        </ul></nav>
+                </header><!-- /#banner -->
+
+                <aside id="featured" class="body">
+                    <article>
+                        <h1 class="entry-title"><a href="/example-rst.html">Example (RST)</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2025-09-06T11:00:00+09:00">
+                Published: 土 06 9月 2025
+        </abbr>
+
+                <address class="vcard author">
+                        By                                 <a class="url fn" href="/author/watanabe3tipapa.html">watanabe3tipapa</a>
+                </address>
+        <p>In <a href="/category/restructuredtext.html">reStructuredText</a>.</p>
+<p>tags: <a href="/tag/pelican.html">pelican</a> <a href="/tag/rst.html">rst</a> </p>        
+</footer><!-- /.post-info --><div class="section" id="rst">
+<h2>RSTでの記事作成</h2>
+<p>これはreStructuredTextで書かれた記事の本文です。
+以下に記法の事例を示します。</p>
+<div class="section" id="section-1">
+<h3>リンクの例</h3>
+<p><a class="reference external" href="https://getpelican.com/">Pelicanの公式サイト</a> を見てみましょう。</p>
+</div>
+<div class="section" id="section-2">
+<h3>コードブロックの例</h3>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello from a reStructuredText file!&quot;</span><span class="p">)</span>
+</pre></div>
+<p>---</p>
+</div>
+<div class="section" id="section-3">
+<h3>リストの例</h3>
+<ul class="simple">
+<li>箇条書きリスト1</li>
+<li>箇条書きリスト2<ul>
+<li>入れ子リスト</li>
+</ul>
+</li>
+</ul>
+<ol class="arabic simple">
+<li>番号付きリスト1</li>
+<li>番号付きリスト2</li>
+</ol>
+</div>
+<div class="section" id="section-4">
+<h3>文字装飾の例</h3>
+<p><em>イタリック</em> や <strong>ボールド</strong> が使えます。</p>
+</div>
+<div class="section" id="section-5">
+<h3>画像の例</h3>
+<img alt="代替テキスト" src="/assets/your_image.jpg" style="width: 200px;" />
+</div>
+<div class="section" id="section-6">
+<h3>テーブルの例</h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">ヘッダー1</th>
+<th class="head">ヘッダー2</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>セル 1-1</td>
+<td>セル 1-2</td>
+</tr>
+<tr><td>セル 2-1</td>
+<td>セル 2-2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="section-7">
+<h3>注釈の例</h3>
+<p>これは注釈付きの文章です <a class="footnote-reference" href="#footnote-1" id="footnote-reference-1">[1]</a> 。
+そして、これはもう一つの注釈です <a class="footnote-reference" href="#footnote-2" id="footnote-reference-2">[2]</a> 。</p>
+<p class="rubric">注釈</p>
+<table class="docutils footnote" frame="void" id="footnote-1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#footnote-reference-1">[1]</a></td><td>最初の注釈の内容です。</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="footnote-2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#footnote-reference-2">[2]</a></td><td>二番目の注釈の内容です。</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="section-8">
+<h3>引用の例</h3>
+<blockquote>
+これは引用されたブロックです。
+インデントすることで表現します。</blockquote>
+</div>
+<div class="section" id="section-9">
+<h3>ノートディレクティブの例</h3>
+<div class="admonition note">
+<p class="first admonition-title">備考</p>
+<p class="last">これは読者の注意を引くためのノートです。
+重要な情報を記載するのに便利です。</p>
+</div>
+<p>---</p>
+</div>
+<div class="section" id="section-10">
+<h3>定義リストの例</h3>
+<dl class="docutils">
+<dt>用語1</dt>
+<dd>用語1の説明です。</dd>
+<dt>用語2</dt>
+<dd>用語2の説明です。
+複数行にわたって書くこともできます。</dd>
+</dl>
+</div>
+<div class="section" id="section-11">
+<h3>警告ディレクティブの例</h3>
+<div class="admonition warning">
+<p class="first admonition-title">警告</p>
+<p class="last">これは特に注意してほしい内容を記述する際に使います。</p>
+</div>
+</div>
+<div class="section" id="section-12">
+<h3>置換の例</h3>
+<p>この文章では reStructuredText という略語が使えます。</p>
+<p>---</p>
+</div>
+</div>
+                    </article>
+                </aside><!-- /#featured -->
+                <section id="extras" class="body">
+                                <div class="blogroll">
+                                        <h2>links</h2>
+                                        <ul>
+                                                        <li><a href="https://watanabe3tipapa.github.io">Github</a></li>
+                                                        <li><a href="https://toolsmith.watanabe3ti.com">Toolsmith</a></li>
+                                                        <li><a href="http://watanabe3ti.txt-nifty.com/f2f/">BLOG</a></li>
+                                                        <li><a href="#">You can modify those links in your config file</a></li>
+                                        </ul>
+                                </div><!-- /.blogroll -->
+                                <div class="social">
+                                        <h2>social</h2>
+                                        <ul>
+
+                                                        <li><a href="https://x.com/watanabe3tipapa">X</a></li>
+                                                        <li><a href="https://www.instagram.com/chombo_watanabe3tipapa/">Instagram</a></li>
+                                                        <li><a href="https://www.facebook.com/toru.watanabe3ti/">Facebook</a></li>
+                                                        <li><a href="#">You can add links in your config file</a></li>
+                                                        <li><a href="#">Another social link</a></li>
+                                        </ul>
+                                </div><!-- /.social -->
+                </section><!-- /#extras -->
+
+                <footer id="contentinfo" class="body">
+                        <address id="about" class="vcard body">
+                                Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
+                        </address><!-- /#about -->
+
+                        <p>The theme is by <a rel="nofollow" href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+                </footer><!-- /#contentinfo -->
+
+        </body>
+</html>

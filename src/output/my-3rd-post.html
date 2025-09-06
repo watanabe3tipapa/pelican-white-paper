@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+        <head>
+                        <meta charset="utf-8" />
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                        <meta name="generator" content="Pelican" />
+                        <title>My 3rd Post</title>
+                        <link rel="stylesheet" href="/theme/css/main.css" />
+    <meta name="description" content="これは私の３番目の投稿です。 以下は、サイトのビルド方法です。 サイトの公開手順 このプロジェクトでは、コンテンツをビルドし、GitHubにプッシュすることでCloudflare Pagesに自動でデプロイする流れを想定しています …" />
+        </head>
+
+        <body id="index" class="home">
+                <header id="banner" class="body">
+                        <h1><a href="/">Pelcan White Paper</a></h1>
+                        <nav><ul>
+                                                <li><a href="/category/restructuredtext.html">reStructuredText</a></li>
+                                                <li class="active"><a href="/category/tekunorozi-.html">テクノロジー</a></li>
+                        </ul></nav>
+                </header><!-- /#banner -->
+  <section id="content" class="body">
+    <article>
+      <header>
+        <h1 class="entry-title">
+          <a href="/my-3rd-post.html" rel="bookmark"
+             title="Permalink to My 3rd Post">My 3rd Post</a></h1>
+      </header>
+
+      <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2025-09-05T00:00:00+09:00">
+                Published: 金 05 9月 2025
+        </abbr>
+
+                <address class="vcard author">
+                        By                                 <a class="url fn" href="/author/watanabe3tipapa.html">watanabe3tipapa</a>
+                </address>
+        <p>In <a href="/category/tekunorozi-.html">テクノロジー</a>.</p>
+        
+</footer><!-- /.post-info -->        <p>これは私の３番目の投稿です。
+以下は、サイトのビルド方法です。</p>
+<h2>サイトの公開手順</h2>
+<p>このプロジェクトでは、コンテンツをビルドし、GitHubにプッシュすることでCloudflare Pagesに自動でデプロイする流れを想定しています。</p>
+<h3>1. 公開用のサイトをビルド</h3>
+<p>まず、ローカルで公開用の静的ファイルを生成します。プロジェクトのルートディレクトリで以下のコマンドを実行してください。</p>
+<div class="highlight"><pre><span></span><code>invoke<span class="w"> </span>preview
+</code></pre></div>
+
+<p>このコマンドは <code>publishconf.py</code> の設定を使って <code>src/output</code> ディレクトリにファイルを出力します。</p>
+<h3>2. 変更をGitHubにプッシュ</h3>
+<p>次に、生成されたファイルを含むすべての変更をGitHubリポジトリにプッシュします。</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;記事の追加や更新&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+
+<h3>3. Cloudflare Pagesでの自動ビルド</h3>
+<p>Cloudflare Pagesは、GitHubリポジトリへのプッシュを検知して、自動でサイトのビルドとデプロイを行います。</p>
+<p>Cloudflareでのビルド設定は以下の通りです。</p>
+<ul>
+<li><strong>ビルドコマンド</strong>: <code>invoke preview</code></li>
+<li><strong>ビルド出力ディレクトリ</strong>: <code>src/output</code></li>
+</ul>
+<p>この設定により、GitHubにプッシュするだけで、数分後にはサイトが更新されます。</p>
+<hr>
+      </div><!-- /.entry-content -->
+
+    </article>
+  </section>
+                <section id="extras" class="body">
+                                <div class="blogroll">
+                                        <h2>links</h2>
+                                        <ul>
+                                                        <li><a href="https://watanabe3tipapa.github.io">Github</a></li>
+                                                        <li><a href="https://toolsmith.watanabe3ti.com">Toolsmith</a></li>
+                                                        <li><a href="http://watanabe3ti.txt-nifty.com/f2f/">BLOG</a></li>
+                                                        <li><a href="#">You can modify those links in your config file</a></li>
+                                        </ul>
+                                </div><!-- /.blogroll -->
+                                <div class="social">
+                                        <h2>social</h2>
+                                        <ul>
+
+                                                        <li><a href="https://x.com/watanabe3tipapa">X</a></li>
+                                                        <li><a href="https://www.instagram.com/chombo_watanabe3tipapa/">Instagram</a></li>
+                                                        <li><a href="https://www.facebook.com/toru.watanabe3ti/">Facebook</a></li>
+                                                        <li><a href="#">You can add links in your config file</a></li>
+                                                        <li><a href="#">Another social link</a></li>
+                                        </ul>
+                                </div><!-- /.social -->
+                </section><!-- /#extras -->
+
+                <footer id="contentinfo" class="body">
+                        <address id="about" class="vcard body">
+                                Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
+                        </address><!-- /#about -->
+
+                        <p>The theme is by <a rel="nofollow" href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+                </footer><!-- /#contentinfo -->
+
+        </body>
+</html>
