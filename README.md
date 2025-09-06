@@ -79,6 +79,12 @@ pelican --listen
 
 ---
 
+### 🌐 公開してみます
+
+[Cloudflare Pages](https://pelican-white-paper.pages.dev)
+
+---
+
 ### 📓 Pelican を学ぶ
 
 [Pelicanのドキュメント](https://docs.getpelican.com/en/latest/)
