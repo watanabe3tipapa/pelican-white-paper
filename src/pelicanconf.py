@@ -37,5 +37,6 @@ SOCIAL = (
 
 DEFAULT_PAGINATION = 10
 
-# Uncomment following line if you want document-relative URLs when developing
-# RELATIVE_URLS = True
+# Use document-relative URLs for deployment under a subpath
+# (e.g. GitHub Pages / Cloudflare Pages subdirectory)
+RELATIVE_URLS = True
