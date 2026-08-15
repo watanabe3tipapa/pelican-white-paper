@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pelican White Paper - テクノロジー</title><link href="https://pelican-white-paper.pages.dev/" rel="alternate"/><link href="https://pelican-white-paper.pages.dev/feeds/tekunorozi-.atom.xml" rel="self"/><id>https://pelican-white-paper.pages.dev/</id><updated>2025-09-05T00:00:00+09:00</updated><entry><title>My 2nd Post</title><link href="https://pelican-white-paper.pages.dev/my-2nd-post.html" rel="alternate"/><published>2025-09-05T00:00:00+09:00</published><updated>2025-09-05T00:00:00+09:00</updated><author><name>watanabe3tipapa</name></author><id>tag:pelican-white-paper.pages.dev,2025-09-05:/my-2nd-post.html</id><summary type="html">&lt;p&gt;これは私の２番目の投稿です。&lt;/p&gt;
+&lt;h2&gt;Pelicanのメタデータについて&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="IMG" src="./assets/IMG_meta_data.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;以上の中から必要に応じて使用します。&lt;/p&gt;
+&lt;h2&gt;Pelicanのメタデータとその利点&lt;/h2&gt;
+&lt;p&gt;Pelicanでは、Markdownファイルの先頭に&lt;code&gt;Title&lt;/code&gt;や&lt;code&gt;Date&lt;/code&gt;といった「メタデータ」を記述します。これらは記 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;これは私の２番目の投稿です。&lt;/p&gt;
+&lt;h2&gt;Pelicanのメタデータについて&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="IMG" src="./assets/IMG_meta_data.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;以上の中から必要に応じて使用します。&lt;/p&gt;
+&lt;h2&gt;Pelicanのメタデータとその利点&lt;/h2&gt;
+&lt;p&gt;Pelicanでは、Markdownファイルの先頭に&lt;code&gt;Title&lt;/code&gt;や&lt;code&gt;Date&lt;/code&gt;といった「メタデータ」を記述します。これらは記事の本文そのものではなく、記事に関する「情報」です。&lt;/p&gt;
+&lt;p&gt;!IMG&lt;/p&gt;
+&lt;p&gt;このメタデータを使うことで、以下のような多くの利点があります。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;コンテンツの自動整理&lt;/strong&gt;: &lt;code&gt;Category&lt;/code&gt;や&lt;code&gt;Tags&lt;/code&gt;を指定すると、Pelicanが自動でカテゴリ別・タグ別のアーカイブページを生成してくれます。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;URLの最適化&lt;/strong&gt;: &lt;code&gt;Slug&lt;/code&gt;メタデータを使えば、記事のURLを分かりやすくカスタマイズできます。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;表示の制御&lt;/strong&gt;: &lt;code&gt;Summary&lt;/code&gt;メタデータで記事一覧に表示する要約を自由に設定できます。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;テーマとの連携&lt;/strong&gt;: テーマはこれらのメタデータを読み取り、著者名や公開日を適切な場所に表示します。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;このように、メタデータはサイトの構造化と自動化の要となる重要な機能です。&lt;/p&gt;</content><category term="テクノロジー"/></entry><entry><title>My 3rd Post</title><link href="https://pelican-white-paper.pages.dev/my-3rd-post.html" rel="alternate"/><published>2025-09-05T00:00:00+09:00</published><updated>2025-09-05T00:00:00+09:00</updated><author><name>watanabe3tipapa</name></author><id>tag:pelican-white-paper.pages.dev,2025-09-05:/my-3rd-post.html</id><summary type="html">&lt;p&gt;これは私の３番目の投稿です。
+以下は、サイトのビルド方法です。&lt;/p&gt;
+&lt;h2&gt;サイトの公開手順&lt;/h2&gt;
+&lt;p&gt;このプロジェクトでは、コンテンツをビルドし、GitHubにプッシュすることでCloudflare Pagesに自動でデプロイする流れを想定しています …&lt;/p&gt;</summary><content type="html">&lt;p&gt;これは私の３番目の投稿です。
+以下は、サイトのビルド方法です。&lt;/p&gt;
+&lt;h2&gt;サイトの公開手順&lt;/h2&gt;
+&lt;p&gt;このプロジェクトでは、コンテンツをビルドし、GitHubにプッシュすることでCloudflare Pagesに自動でデプロイする流れを想定しています。&lt;/p&gt;
+&lt;h3&gt;1. 公開用のサイトをビルド&lt;/h3&gt;
+&lt;p&gt;まず、ローカルで公開用の静的ファイルを生成します。プロジェクトのルートディレクトリで以下のコマンドを実行してください。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;invoke&lt;span class="w"&gt; &lt;/span&gt;preview
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;このコマンドは &lt;code&gt;publishconf.py&lt;/code&gt; の設定を使って &lt;code&gt;src/output&lt;/code&gt; ディレクトリにファイルを出力します。&lt;/p&gt;
+&lt;h3&gt;2. 変更をGitHubにプッシュ&lt;/h3&gt;
+&lt;p&gt;次に、生成されたファイルを含むすべての変更をGitHubリポジトリにプッシュします。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;.
+git&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;記事の追加や更新&amp;quot;&lt;/span&gt;
+git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;origin&lt;span class="w"&gt; &lt;/span&gt;main
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;3. Cloudflare Pagesでの自動ビルド&lt;/h3&gt;
+&lt;p&gt;Cloudflare Pagesは、GitHubリポジトリへのプッシュを検知して、自動でサイトのビルドとデプロイを行います。&lt;/p&gt;
+&lt;p&gt;Cloudflareでのビルド設定は以下の通りです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ビルドコマンド&lt;/strong&gt;: &lt;code&gt;invoke preview&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ビルド出力ディレクトリ&lt;/strong&gt;: &lt;code&gt;src/output&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;この設定により、GitHubにプッシュするだけで、数分後にはサイトが更新されます。&lt;/p&gt;
+&lt;hr&gt;</content><category term="テクノロジー"/></entry><entry><title>My First Post</title><link href="https://pelican-white-paper.pages.dev/my-first-post.html" rel="alternate"/><published>2025-09-05T00:00:00+09:00</published><updated>2025-09-05T00:00:00+09:00</updated><author><name>watanabe3tipapa</name></author><id>tag:pelican-white-paper.pages.dev,2025-09-05:/my-first-post.html</id><summary type="html">&lt;p&gt;これは私の最初の投稿です。&lt;/p&gt;
+&lt;h2&gt;なぜ Pelican を使うのか&lt;/h2&gt;
+&lt;p&gt;PelicanはPython製の静的サイトジェネレーターで、以下のような多くの利点があります。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;高速でセキュア&lt;/strong&gt;: データベース …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;これは私の最初の投稿です。&lt;/p&gt;
+&lt;h2&gt;なぜ Pelican を使うのか&lt;/h2&gt;
+&lt;p&gt;PelicanはPython製の静的サイトジェネレーターで、以下のような多くの利点があります。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;高速でセキュア&lt;/strong&gt;: データベースを使わず、静的なHTMLファイルを生成するため、サイトの表示が非常に高速で、セキュリティリスクも低減されます。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;シンプルな記述&lt;/strong&gt;: MarkdownやreStructuredTextといった、普段から使い慣れた形式で記事を執筆できます。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pythonによる拡張性&lt;/strong&gt;: Pythonで書かれているため、プラグインの作成やテーマのカスタマイズが容易です。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;デプロイが簡単&lt;/strong&gt;: 生成されたファイル群をサーバーにアップロードするだけで公開できます。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;豊富なエコシステム&lt;/strong&gt;: 多くのテーマやプラグインがコミュニティによって提供されています。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;</content><category term="テクノロジー"/></entry></feed>
