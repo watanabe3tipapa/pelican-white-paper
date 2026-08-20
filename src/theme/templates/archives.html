@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}All Posts | {{ SITENAME }}{% endblock title %}
+{% block body_id %}archives{% endblock body_id %}
+
+{% block content %}
+<section class="listing-header listing-header--blue">
+  <p class="eyebrow">THE ARCHIVE</p>
+  <h1>ALL<br>POSTS.</h1>
+  <p>これまでに公開したすべてのノート。</p>
+</section>
+<section class="archive-list" aria-label="全記事一覧">
+  {% for article in dates %}
+  <article class="archive-row">
+    <time datetime="{{ article.date.isoformat() }}"><span>{{ article.date.strftime('%Y') }}</span>{{ article.date.strftime('.%m.%d') }}</time>
+    <a class="badge" href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+    <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+    <a class="archive-row__arrow" href="{{ SITEURL }}/{{ article.url }}" aria-label="{{ article.title }}を読む">↗</a>
+  </article>
+  {% else %}
+  <p class="empty-state">まだ記事はありません。</p>
+  {% endfor %}
+</section>
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Tags | {{ SITENAME }}{% endblock title %}
+{% block body_id %}tags{% endblock body_id %}
+
+{% block content %}
+<section class="listing-header listing-header--yellow">
+  <p class="eyebrow">INDEX</p>
+  <h1>ALL<br>TAGS.</h1>
+  <p>テーマからノートを探す。</p>
+</section>
+<section class="index-cloud" aria-label="タグ一覧">
+  {% for tag, articles in tags|sort %}
+  <a href="{{ SITEURL }}/{{ tag.url }}"><span>#</span>{{ tag }} <sup>{{ articles|length }}</sup></a>
+  {% else %}
+  <p class="empty-state">タグはまだありません。</p>
+  {% endfor %}
+</section>
+{% endblock content %}

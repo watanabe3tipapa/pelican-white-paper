@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Pelican">
+  <meta name="theme-color" content="#ff4d8d">
+  <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+  {% if FEED_ALL_ATOM %}
+  <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed">
+  {% endif %}
+  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/neo-brutalism.css">
+</head>
+<body id="{% block body_id %}index{% endblock body_id %}">
+  <a class="skip-link" href="#main-content">本文へ移動</a>
+
+  <header class="site-header">
+    <div class="site-header__top container">
+      <a class="brand" href="{{ SITEURL }}/" aria-label="{{ SITENAME }} トップページ">
+        <span class="brand__mark" aria-hidden="true">PW</span>
+        <span class="brand__type">PELICAN<br>WHITE PAPER</span>
+      </a>
+      <p class="header-stamp">OPEN NOTES<br>ON THE WEB</p>
+    </div>
+    {% if categories %}
+    <nav class="site-nav container" aria-label="カテゴリー">
+      <span class="site-nav__label">TOPICS</span>
+      <ul>
+        <li><a href="{{ SITEURL }}/archives.html">ALL POSTS</a></li>
+        {% for category, articles in categories %}
+        <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {% endif %}
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">OPEN KNOWLEDGE <span>✦</span> MARKDOWN TO WEB <span>✦</span> PELICAN POWERED <span>✦</span> OPEN KNOWLEDGE <span>✦</span> MARKDOWN TO WEB <span>✦</span> PELICAN POWERED <span>✦</span></div>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    {% block content %}{% endblock content %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__grid container">
+      <section>
+        <p class="eyebrow">ABOUT</p>
+        <p class="footer-title">{{ SITENAME }}</p>
+        <p>PelicanとMarkdownでつくる、軽量で自由なナレッジサイト。</p>
+      </section>
+      {% if LINKS %}
+      <section>
+        <p class="eyebrow">LINKS</p>
+        <ul class="footer-links">
+          {% for name, link in LINKS %}
+          {% if link != '#' %}<li><a href="{{ link }}" target="_blank" rel="noopener">{{ name }} <span aria-hidden="true">↗</span></a></li>{% endif %}
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+      {% if SOCIAL %}
+      <section>
+        <p class="eyebrow">FOLLOW</p>
+        <ul class="footer-links">
+          {% if FEED_ALL_ATOM %}<li><a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}">ATOM FEED <span aria-hidden="true">↗</span></a></li>{% endif %}
+          {% for name, link in SOCIAL %}
+          {% if link != '#' %}<li><a href="{{ link }}" target="_blank" rel="noopener">{{ name }} <span aria-hidden="true">↗</span></a></li>{% endif %}
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+    </div>
+    <div class="site-footer__bottom container">
+      <p>© {{ CURRENT_YEAR }} {{ AUTHOR }}. BUILT WITH <a href="https://getpelican.com/">PELICAN</a>.</p>
+      <p>MADE FOR CURIOUS MINDS.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Authors | {{ SITENAME }}{% endblock title %}
+{% block body_id %}authors{% endblock body_id %}
+
+{% block content %}
+<section class="listing-header listing-header--pink">
+  <p class="eyebrow">INDEX</p>
+  <h1>ALL<br>AUTHORS.</h1>
+  <p>このサイトのノートを書いた人々。</p>
+</section>
+<section class="topic-grid" aria-label="著者一覧">
+  {% for author, articles in authors %}
+  <a class="topic-card" href="{{ SITEURL }}/{{ author.url }}">
+    <span class="topic-card__count">{{ '%02d'|format(articles|length) }}</span>
+    <span class="topic-card__title">{{ author }}</span>
+    <span class="topic-card__arrow" aria-hidden="true">↗</span>
+  </a>
+  {% else %}
+  <p class="empty-state">著者情報はまだありません。</p>
+  {% endfor %}
+</section>
+{% endblock content %}

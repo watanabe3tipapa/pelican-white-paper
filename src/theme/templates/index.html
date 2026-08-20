@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }}{% endblock title %}
+
+{% block content %}
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__label">EST. 2025 / KNOWLEDGE BASE</div>
+  <div class="hero__main">
+    <p class="eyebrow">STATIC SITE, LOUD IDEAS.</p>
+    <h1 id="hero-title">WRITE.<br><span>BUILD.</span><br>SHARE.</h1>
+    <div class="hero__aside">
+      <p>Markdownで書き、Pelicanで届ける。技術・データ・公共政策をめぐる、実践的なメモとリソース。</p>
+      <a class="button button--yellow" href="#latest">最新の記事を見る <span aria-hidden="true">↓</span></a>
+    </div>
+  </div>
+  <div class="hero__shapes" aria-hidden="true">
+    <span class="shape shape--pink"></span>
+    <span class="shape shape--lime"></span>
+    <span class="shape shape--blue">!</span>
+  </div>
+</section>
+
+{% if articles %}
+{% set featured = articles[0] %}
+<section class="section-block" aria-labelledby="featured-title">
+  <div class="section-heading">
+    <p class="eyebrow">FEATURED NOTE</p>
+    <h2 id="featured-title">PICK OF THE<br>WEEK <span>→</span></h2>
+  </div>
+  <article class="featured-card">
+    <div class="featured-card__meta">
+      <span class="badge badge--pink">{{ featured.category }}</span>
+      <time datetime="{{ featured.date.isoformat() }}">{{ featured.date.strftime('%Y.%m.%d') }}</time>
+    </div>
+    <h3><a href="{{ SITEURL }}/{{ featured.url }}">{{ featured.title }}</a></h3>
+    <p>{{ featured.summary|striptags|truncate(190, True, '…') }}</p>
+    <a class="button button--black" href="{{ SITEURL }}/{{ featured.url }}">記事を読む <span aria-hidden="true">↗</span></a>
+  </article>
+</section>
+
+<section id="latest" class="section-block section-block--latest" aria-labelledby="latest-title">
+  <div class="section-heading section-heading--line">
+    <p class="eyebrow">RECENT POSTS</p>
+    <h2 id="latest-title">FRESH<br>INK.</h2>
+  </div>
+  <div class="post-grid">
+    {% for article in articles[1:] %}
+    <article class="post-card post-card--{{ loop.index % 4 }}">
+      <div class="post-card__meta">
+        <span class="badge">{{ article.category }}</span>
+        <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%Y.%m.%d') }}</time>
+      </div>
+      <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+      <p>{{ article.summary|striptags|truncate(120, True, '…') }}</p>
+      <a class="text-link" href="{{ SITEURL }}/{{ article.url }}">READ NOTE <span aria-hidden="true">→</span></a>
+    </article>
+    {% endfor %}
+  </div>
+  {% if articles|length == 1 %}
+  <p class="empty-state">次のノートを準備中です。</p>
+  {% endif %}
+</section>
+{% else %}
+<section class="empty-state"><h1>COMING SOON.</h1><p>最初のノートを準備中です。</p></section>
+{% endif %}
+{% endblock content %}

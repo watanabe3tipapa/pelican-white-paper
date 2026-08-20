@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }} | {{ SITENAME }}{% endblock title %}
+{% block body_id %}article{% endblock body_id %}
+
+{% block content %}
+<article class="article-detail">
+  <header class="article-header">
+    <div class="article-header__meta">
+      <a class="badge badge--lime" href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+      <time datetime="{{ article.date.isoformat() }}">PUBLISHED {{ article.date.strftime('%Y.%m.%d') }}</time>
+      {% if article.modified %}<time datetime="{{ article.modified.isoformat() }}">UPDATED {{ article.modified.strftime('%Y.%m.%d') }}</time>{% endif %}
+    </div>
+    <h1>{{ article.title }}</h1>
+    {% if article.summary %}<p class="article-header__summary">{{ article.summary|striptags }}</p>{% endif %}
+    <div class="article-header__byline">
+      <span>WRITTEN BY</span>
+      {% for author in article.authors %}<a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>{% if not loop.last %}, {% endif %}{% endfor %}
+    </div>
+  </header>
+
+  <div class="article-layout">
+    <aside class="article-rail" aria-label="記事情報">
+      <p class="eyebrow">ARTICLE INFO</p>
+      <p>カテゴリー</p>
+      <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+      {% if article.tags %}
+      <p>タグ</p>
+      <div class="tag-list">
+        {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }}</a>{% endfor %}
+      </div>
+      {% endif %}
+    </aside>
+    <div class="article-body">
+      {{ article.content }}
+    </div>
+  </div>
+
+  <footer class="article-footer">
+    <a class="button button--yellow" href="{{ SITEURL }}/archives.html">すべての記事へ <span aria-hidden="true">→</span></a>
+    <a class="button button--black" href="#main-content">ページ上部へ <span aria-hidden="true">↑</span></a>
+  </footer>
+</article>
+{% endblock content %}

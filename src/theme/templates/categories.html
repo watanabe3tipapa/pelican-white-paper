@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Categories | {{ SITENAME }}{% endblock title %}
+{% block body_id %}categories{% endblock body_id %}
+
+{% block content %}
+<section class="listing-header listing-header--lime">
+  <p class="eyebrow">INDEX</p>
+  <h1>ALL<br>TOPICS.</h1>
+  <p>興味のあるトピックからノートをたどる。</p>
+</section>
+<section class="topic-grid" aria-label="カテゴリー一覧">
+  {% for category, articles in categories %}
+  <a class="topic-card" href="{{ SITEURL }}/{{ category.url }}">
+    <span class="topic-card__count">{{ '%02d'|format(articles|length) }}</span>
+    <span class="topic-card__title">{{ category }}</span>
+    <span class="topic-card__arrow" aria-hidden="true">↗</span>
+  </a>
+  {% else %}
+  <p class="empty-state">カテゴリーはまだありません。</p>
+  {% endfor %}
+</section>
+{% endblock content %}

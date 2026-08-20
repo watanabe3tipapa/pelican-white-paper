@@ -3,6 +3,7 @@ SITENAME = 'Pelican White Paper'
 SITEURL = ""
 
 PATH = "content"
+THEME = "theme"
 
 STATIC_PATHS = ['assets']
 
