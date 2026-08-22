@@ -3,86 +3,66 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Version](https://img.shields.io/badge/version-0.1.0-green.svg)
 
-## Pelican を使って Markdown を web にしてみましょう
+概要
 
+Pelican を使って Markdown を Web に変換することを紹介するリポジトリです。Pelican は Python 製の静的サイトジェネレーターで、ブログやドキュメントサイトを簡単に作成できます。
 
----
+ホームページ
 
-## 🐍 Pelican とは
+デモ / 公開ページ: https://watanabe3tipapa.github.io/pelican-white-paper/
 
-Pelicanは、Pythonで書かれた静的サイトジェネレーターで、ブログやドキュメントサイトを簡単に作成することができます。
+主な内容・目的
 
+- Pelican の特徴や利点の解説（静的サイト生成、Markdown サポート、プラグイン/テーマ、国際化など）。
+- このリポジトリを使った静的サイト作成の手順例（元 README に記載されているコマンド例を含む）。
 
-## 🚀 主な機能
+このリポジトリに含まれる主なファイル・構成（確認できるもの）
 
-Pelicanは、Pythonで書かれた静的サイトジェネレーターで、特にブログやドキュメントサイトの作成に適しています。以下に、Pelicanの主な機能を詳しく解説します。
+- pyproject.toml（プロジェクト設定、依存関係、バージョン情報を含む）
+- src/（コンテンツやテンプレートが格納されているディレクトリ）
+- uv.lock（リポジトリ内に存在）
+- README.md（このファイル）
 
-### 1. 静的サイト生成
+要件（pyproject.toml による確認）
 
-- **高速なパフォーマンス**: Pelicanは静的なHTMLファイルを生成するため、サーバーの負荷が軽く、ページの読み込みが非常に速いです。
-- **セキュリティ**: 静的サイトは動的なコンテンツを持たないため、データベースやサーバーサイドの脆弱性が少なく、セキュリティが向上します。
+- Python: >= 3.11
+- 依存関係（pyproject.toml に記載されたもの）:
+  - invoke>=3.0.3
+  - pelican[markdown]>=4.12.0
+  - typogrify>=2.1.0
 
+注意: これらはリポジトリに含まれる pyproject.toml で宣言されている要件です。
 
-### 2. Markdownサポート
+リポジトリで示されている手順（元 README に記載されているコマンド例）
 
-- **シンプルな記法**: PelicanはMarkdown形式でコンテンツを作成できるため、書きやすく、視覚的にもわかりやすいです。Markdownは、テキストを簡単にフォーマットできる軽量マークアップ言語です。
-- **拡張性**: Markdownの拡張機能を利用して、画像やリンク、リストなどを簡単に追加できます。
+以下のコマンド例は元 README の内容を再掲しています。実行環境やツール（例: uv）のセットアップ方法はこのリポジトリ内で明示されていないため、実行する場合は各自の環境に合わせて確認してください。
 
+通常のインストール方法（元 README の記載）
 
-### 3. プラグインとテーマのカスタマイズ
-
-- **豊富なプラグイン**: Pelicanは多くのプラグインをサポートしており、SEO、ソーシャルメディアの統合、サイトマップの生成など、機能を簡単に拡張できます。
-- **テーマの選択肢**: Pelicanには多くのテーマがあり、デザインを簡単に変更できます。自分でテーマを作成することも可能です。
-
-
-### 4. 多言語対応
-
-- **国際化**: Pelicanは多言語サイトの構築をサポートしており、異なる言語でコンテンツを作成することができます。これにより、グローバルなオーディエンスに対応できます。
-
-
-### 5. コマンドラインインターフェース
-
-- **使いやすいCLI**: Pelicanはコマンドラインから操作できるため、スクリプトや自動化ツールと組み合わせて使用することが容易です。ビルドやデプロイを簡単に行えます。
-
-
-### 6. GitHub PagesやNetlifyとの統合
-
-- **簡単なデプロイ**: Pelicanで生成した静的サイトは、GitHub PagesやNetlifyなどのホスティングサービスに簡単にデプロイできます。これにより、手間をかけずにサイトを公開できます。
-
-
-### 7. カスタマイズ可能な設定
-
-- **設定ファイル**: `pelicanconf.py`ファイルを通じて、サイトの設定を柔軟にカスタマイズできます。サイト名、URL、テーマ、プラグインなどを簡単に変更できます。
-
-Pelicanは、これらの特徴により、特に開発者や技術者にとって使いやすく、効率的な静的サイトの構築を可能にします。
-
-
----
-
-### 📦 通常のインストール方法
-
-Pelicanをインストールするには、以下のコマンドを使用します。
 （仮想環境でインストールする：推奨）
 
 ```bash
 uv tool install "pelican[markdown]"
 ```
-または、推奨される依存関係を含めてインストールするには：
+
+依存関係の追加（元 README の記載）
+
 ```bash
 uv add typogrify
 ```
+
+プロジェクトの初期化（元 README の記載）
 
 プロジェクト・ディレクトリ（/src）を作ります。
 
 本来のインストール方法
 /srcで次のコマンドを実行します
+
 ```bash
 pelican-quickstart
 ```
 
----
-
-### 📦 このリポジトリを利用する場合
+このリポジトリを利用する場合（元 README の記載）
 
 - このリポジトリをクローンします。
 
@@ -93,62 +73,49 @@ pelican-quickstart
 uv sync
 ```
 
----
+コンテンツ作成とビルド（元 README の記載）
 
-### 📦 コンテンツ（Markdownファイル）を作成
+- /src/templates にあるマークダウンファイルの記法を参考にし、作成したコンテンツは /src/content に格納するとされています。
 
-- /src/templatesにあるマークダウンファイルの記法を参考にしてください。
-  
-作成したコンテンツは/src/contentに格納します
+Pelican でマークダウンを変換（元 README の記載）
 
+/src で次のコマンドを実行します
 
-
-### 📦 pelican でマークダウンを変換
-
-/srcで次のコマンドを実行します
 ```bash
 pelican content
 ```
 
-### 📦 プレビューしてみます
+プレビュー（元 README の記載）
 
 ```bash
 pelican --listen
 ```
 
----
+注記
 
-### 📓 Pelican を学ぶ
+- 上記のコマンド群は元 README に記載されている例を整理して示したものです。リポジトリ内のファイルや設定に依存しますので、実行前に環境と設定を確認してください。
+- 元 README 内には "uv" による操作例が含まれていますが、uv ツールの導入や挙動はこのリポジトリ内で明示されていません。uv を使う場合は別途ドキュメントを参照してください。
 
-[Pelicanのドキュメント](https://docs.getpelican.com/en/latest/)
+参考資料
 
+- Pelican のドキュメント: https://docs.getpelican.com/en/latest/
 
----
 ライセンス
 
-MIT License
+- MIT License（元 README に記載あり）
 
 貢献
 
-プルリクエストやイシューの報告を歓迎?します！
+- 元 README ではプルリクエストやイシューの報告を歓迎すると記載されています。具体的な貢献ガイドラインはリポジトリ内に明記されていないため、貢献を希望する場合はまず Issue を立てるか、プルリクエストを作成してください。
 
-更新履歴
+リリース履歴（元 README による）
 
 v0.1.0
-
 - 初期リリース
 - Pelican の紹介
-- starter kit （README.md）
+- starter kit（README.md）
 - pyproject.toml
 
----
+更新情報
 
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="50" viewBox="0 0 200 50">
-  <a href="https://github.com/watanabe3tipapa/pelican-white-paper" target="_blank">
-    <rect width="200" height="50" rx="10" fill="#24292e"/>
-    <text x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" fill="#ffffff" font-size="20" font-family="Arial">GitHub Repository</text>
-  </a>
-</svg>
-
-
----
+- 最終更新（リポジトリメタデータ）: 2026-08-21T16:21:53Z
